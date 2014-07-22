@@ -114,7 +114,7 @@ object Config {
       .build
 }
 
-object Driver extends ConsolePersistence {
+object Driver {
   def main(args: Array[String]) = {
     lazy val system = ActorSystem("twitter")
     val storage = system.actorOf(Props[DataStorage])
